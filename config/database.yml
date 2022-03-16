@@ -20,6 +20,15 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+
 production:
   <<: *default
-  database: db/production.sqlite3
+  database: qro_api
+  username: qro_api
+  password: <%= ENV['QRO_DATABASE_PASSWORD'] %>
+
+production:
+  <<: *default
+  database: myapp_production
+  username: myapp
+  password: <%= ENV["MYAPP_DATABASE_PASSWORD"] %>
