@@ -159,6 +159,8 @@ Devise.setup do |config|
   # unconfirmed_email column, and copied to email column on successful confirmation.
   config.reconfirmable = true
 
+  config.omniauth :facebook, ENV["APP_ID"], ENV["APP_SECRET"], access_type: "online"
+  config.omniauth :google_oauth2, ENV["GOOGLE_CLIENT_ID"], ENV["GOOGLE_CLIENT_SECRET"], access_type: "online"
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [:email]
 
