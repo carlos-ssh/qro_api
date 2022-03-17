@@ -10,7 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_16_202903) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_17_154307) do
+  create_table "properties", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "name"
+    t.string "address"
+    t.string "description"
+    t.decimal "price"
+    t.integer "rooms"
+    t.integer "bathrooms"
+    t.integer "meters"
+    t.integer "garage"
+    t.string "image"
+    t.boolean "for_sale", default: true
+    t.string "status", default: "disponible"
+    t.datetime "available_date", precision: nil
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false

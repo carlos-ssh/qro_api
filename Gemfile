@@ -28,7 +28,7 @@ gem "omniauth"
 gem "omniauth-facebook"
 gem "omniauth-google-oauth2"
 gem "omniauth-rails_csrf_protection"
-
+gem "rspec-rails"
 gem 'rack-cors', :require => 'rack/cors'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
