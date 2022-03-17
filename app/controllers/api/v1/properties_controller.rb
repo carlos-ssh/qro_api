@@ -2,9 +2,9 @@ class Api::V1::PropertiesController < ApplicationController
   before_action :set_property, only: %i[ show update destroy ]
 
   def index
-    @properties = Property.all
+    properties = Property.recent.page(params[:page]).per(params[:per_page])
 
-    render json: @properties
+    render json: properties
   end
 
   def latest
