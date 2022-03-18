@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_03_17_154307) do
+ActiveRecord::Schema[7.0].define(version: 2022_03_18_175825) do
   create_table "properties", force: :cascade do |t|
     t.integer "user_id"
     t.string "name"
@@ -28,6 +28,13 @@ ActiveRecord::Schema[7.0].define(version: 2022_03_17_154307) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_properties_on_user_id"
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "email"
+    t.string "password_digest"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

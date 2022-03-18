@@ -1,16 +1,6 @@
 class User < ApplicationRecord
-  # Include default devise modules. Others available are:
-  # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
-  devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :validatable,
-         :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
+  has_secure_password
 
-  has_many :properties
-
-  def self.from_omniauth(auth)
-    user = User.where(email: auth.info.email).first
-    user ||= User.create!(provider: auth.provider, uid: auth.uid,
-                          email: auth.info.email, password: Devise.friendly_token[0, 20])
-    user
-  end
+  validates_presence_of :email
+  validates_uniqueness_of :email
 end
