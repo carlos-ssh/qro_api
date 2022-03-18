@@ -9,7 +9,7 @@ class Api::V1::SessionsController < ApplicationController
     if user
       session[:user_id] = user.id
       render json: {
-        status: :created,
+        status: :create,
         logged_in: true,
         user: user
       }
