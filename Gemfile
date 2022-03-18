@@ -20,12 +20,13 @@ gem "puma", "~> 5.0"
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+# gem "omniauth"
+# gem "omniauth-facebook"
+# gem "omniauth-google-oauth2"
+# gem "omniauth-rails_csrf_protection"
+
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 gem "bcrypt", "~> 3.1.7"
-gem "omniauth"
-gem "omniauth-facebook"
-gem "omniauth-google-oauth2"
-gem "omniauth-rails_csrf_protection"
 gem "active_model_serializers", "~> 0.10.13"
 gem "kaminari"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
