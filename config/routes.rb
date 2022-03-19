@@ -10,6 +10,7 @@ Rails.application.routes.draw do
       resources :properties
       resources :registrations, only: [:create]
       resources :sessions, only: [:create]
+      resources :tokens, only: [:create]
 
       get :logged_in, to: "sessions#logged_in"
       delete :logout, to: "sessions#logout"
