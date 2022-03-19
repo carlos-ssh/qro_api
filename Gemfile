@@ -31,7 +31,7 @@ gem "active_model_serializers", "~> 0.10.13"
 gem "kaminari"
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 gem "rack-cors", :require => "rack/cors"
-
+gem "jwt"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
